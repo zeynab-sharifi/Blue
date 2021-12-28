@@ -1,14 +1,15 @@
 <template>
-  <h1>hello</h1>
-  
+  <header-blue></header-blue>
   <router-view></router-view>
 </template>
 
 <script>
-
+import HeaderBlue from "./components/HeaderBlue.vue"
 export default {
   name: 'App',
-  
+  components:{
+    HeaderBlue
+  }
 }
 </script>
 
