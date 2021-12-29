@@ -1,39 +1,68 @@
 <template>
-   <!-- Button trigger modal -->
+  <div class="login-blue">
+     <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Launch demo modal
+              sing in
             </button>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
                   <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="header-modal">
+                      <h5 class="modal-title" id="exampleModalLabel">singin</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form @submit.prevent="login">
+                      <input v-model="username" placeholder="username" type="password">
+                      <input v-model="password" placeholder="password" type="password">
+                      <input type="submit" value="log in">
+                    </form>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center links">
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+  </div>
 </template>
 
 <script>
-  import LoginBlue from "LoginBlue.vue"
-  export default {
-      name: 'App',
-      components:{
-        LoginBlue
+    export default{
+     
+       data() {
+            return {
+              username: "",
+              password: ""
+            };
+          },
+            methods: {
+    async login() {
+      const { username, password } = this;
+      const res = await fetch("",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ username, password })
+        }
+      );
+      const data = await res.json();
+      console.log(data);
     }
   }
+    }
 </script>
 
 <style>
-    
+ 
 </style>

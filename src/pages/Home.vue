@@ -2,29 +2,7 @@
     <section>
         <div class="header-section-home">
         <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-12">
-                <h1>Blue Game</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, quae vitae harum nihil nobis dolores voluptates quibusdam labore sunt accusantium, expedita, veniam a qui rerum! Est illum repellat hic et.</p>
-                <a class="btn btn-primery">Download</a>
-                <div class="better-list-game">
-                    <div class="better-game">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <div class="start-group">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-12">
-                <img src="" alt="">
-            </div>
-        </div>
+        <HeaderHomeSe></HeaderHomeSe>
     </div>
     </div>
     </section>
@@ -153,3 +131,11 @@
         </div>
     </section>
 </template>
+<script>
+import HeaderHomeSe from "./louyer/HeaderHomeSe.vue"
+    export default{
+        components :{
+            HeaderHomeSe
+        }
+    }
+</script>

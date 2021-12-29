@@ -16,14 +16,18 @@
                   </div>
                 </div>
                 <!-- login form in header -->
-               <login></login>
+               <login-blue></login-blue>
           </div>
       </nav>
     </div>
 </header>
 </template>
 <script>
-export default {
-
-}
+import LoginBlue from "./LoginBlue.vue"
+  export default {
+      name: 'App',
+      components:{
+        LoginBlue
+    }
+  }
 </script>

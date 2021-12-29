@@ -6,9 +6,55 @@
 .navbar-expand-lg .navbar-nav a.nav-link {
   color: black;
 }
+.navbar-expand-lg .navbar-nav a.nav-link .navbar-expand-lg .navbar-nav a.nav-link:hover {
+  border-bottom: 1px solid black;
+  transition: all 0.5s ease-in-out;
+}
 
 .header-blue .navbar-toggler-icon {
   color: black;
+}
+
+.login-blue .modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-blue .modal-body form input {
+  margin: 10px 0;
+  padding: 7px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.header-modal {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-section-home {
+  padding: 100px 0;
+}
+.header-section-home .header-section-home img {
+  width: 100%;
+  height: 350px;
+}
+
+.better-list-game {
+  display: flex;
+  flex-direction: row;
+}
+.better-list-game .better-game {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0.5rem 1rem;
+  padding: 5px;
+}
+.better-list-game .better-game .better-game img {
+  width: 100%;
+  height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
