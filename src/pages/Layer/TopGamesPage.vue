@@ -11,7 +11,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-12">
-                        <button class="btn" @click="downloadFile()">downLoad</button>
+                        <button class="btn btn-blue" @click="downloadFile()">downLoad</button>
                     </div>
                 </div>
             </div>

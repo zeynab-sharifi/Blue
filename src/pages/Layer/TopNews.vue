@@ -27,6 +27,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary">more..</a>
+                    <a href="" class="btn btn-blue btn-center">more..</a>
                 </div>
 </template>

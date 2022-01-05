@@ -18,6 +18,6 @@
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quas in reiciendis consequatur explicabo architecto tempora? Delectus, quis aliquam totam deleniti, cupiditate odio optio dolorem, quae fuga architecto praesentium voluptas.</p>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary">More...</a>
+                    <a href="" class="btn btn-blue btn-center">More...</a>
                 </div>
 </template>

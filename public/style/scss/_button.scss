@@ -1,0 +1,31 @@
+@use "_variables";
+
+button.btn-blue,a.btn-blue{
+    padding: .5rem .75rem;
+    border: none;
+    box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .10);
+    color: #fff !important;
+    background: #43cea2;  
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  
+    background: linear-gradient(to right, #185a9d, #43cea2);
+}
+button.btn-blue:hover,.btn-blue:hover{
+    background: #185a9d !important;
+    transition: all .6s ease-in-out;
+}
+a.btn-center{
+    width: 200px;
+    margin: 1.5rem auto;
+}
+button.btn-blue-2,a.btn-blue-2{
+    width: 100px;
+    margin: 0 auto;
+    padding: .25rem .5rem;
+    border: solid 1px #185a9d;
+    box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .10);
+    color: #185a9d !important;
+}
+button.btn-blue-2:hover,a.btn-blue-2:hover{
+    background-color: #185a9d;
+    color: #fff !important;
+}
