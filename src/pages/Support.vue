@@ -11,6 +11,7 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                    <div class="mb-3"><a href="" class="btn btn-blue">submit</a></div>
                 </div>
                 <div class="col-lg-6">
                     <img src="" alt="">
