@@ -1,0 +1,119 @@
+@use "_variables";
+@use "_mixins";
+// header-section-home
+.header-section-home{
+    padding: 100px 0;
+    .header-section-home img{
+        width: 100%;
+        height: 350px;
+    }
+}
+.better-list-game{
+    display: flex;
+    flex-direction: row;
+    .better-game{
+        box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .10);
+        border-radius: 5px;
+        margin: .5rem 1rem;
+        padding: 5px;
+        .better-game img{
+            width: 100%;
+            height: 100px;
+        }
+    }
+}
+
+// header-section-home
+.header-section-home{
+    padding: 100px 0;
+    .header-section-home img{
+        width: 100%;
+        height: 350px;
+    }
+}
+.better-list-game{
+    display: flex;
+    flex-direction: row;
+    .better-game{
+        box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .10);
+        border-radius: 5px;
+        margin: .5rem 1rem;
+        padding: 5px;
+        .better-game img{
+            width: 100%;
+            height: 100px;
+        }
+    }
+}
+// txt Header home
+.txt-header-home{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        color: variables.$black2;
+        margin: 10px auto;
+    }
+    hr{
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+// top-game-section home
+
+.top-game-section{
+    padding: 100px 0;
+    .top-Game{
+        box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .15);
+        border-radius: 7px;
+        padding: 10px;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        img{
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+    }
+    .btn-top-game{
+         margin-top: 1.5rem;   
+    }
+
+}
+// asked-question-section home
+.asked-question-section{
+    padding: 100px 0;
+    .box-asked{
+        box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .15);
+        border-radius: 7px;
+        padding: 10px 15px;
+        margin: 1rem auto; 
+    }
+}
+
+// top-news-section home
+.top-news-section{
+    padding: 100px 0;
+    .box-top-news{
+        display: flex;
+        box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: 0.15);
+        border-radius: 7px;
+        margin: 1rem .5rem;
+        img{
+            width: 150px;
+            height: 150px;
+            
+            border-radius: 7px;
+        }
+        .box-top{
+            margin: 5px 10px;
+            height: 100px;
+            overflow: hidden;
+        }
+    }
+}

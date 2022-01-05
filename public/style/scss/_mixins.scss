@@ -1,0 +1,11 @@
+@use "_variables";
+a{
+    color: variables.$black !important;
+    text-decoration: none !important;
+}
+a:hover{
+    color: #444 !important;
+}
+ul li{
+    list-style-type: none !important;
+}

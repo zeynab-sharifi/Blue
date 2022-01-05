@@ -28,23 +28,40 @@ ul li {
   color: black;
 }
 
-.login-blue .modal-body form {
-  display: flex;
-  flex-direction: column;
+a {
+  color: black !important;
+  text-decoration: none !important;
 }
 
-.login-blue .modal-body form input {
-  margin: 10px 0;
-  padding: 7px;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+a:hover {
+  color: #444 !important;
+}
+
+ul li {
+  list-style-type: none !important;
+}
+
+.header-section-home {
+  padding: 100px 0;
+}
+.header-section-home .header-section-home img {
+  width: 100%;
+  height: 350px;
+}
+
+.better-list-game {
+  display: flex;
+  flex-direction: row;
+}
+.better-list-game .better-game {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  margin: 0.5rem 1rem;
+  padding: 5px;
 }
-
-.header-modal {
-  padding: 0.5rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
+.better-list-game .better-game .better-game img {
+  width: 100%;
+  height: 100px;
 }
 
 .header-section-home {
@@ -137,9 +154,17 @@ ul li {
   overflow: hidden;
 }
 
-.footer-blue {
-  background-color: #9a9a9a;
-  padding: 50px 0;
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #444 !important;
+}
+
+ul li {
+  list-style-type: none !important;
 }
 
 .support-form {
@@ -159,6 +184,30 @@ ul li {
   width: 100%;
   height: 350px;
   overflow: hidden;
+}
+
+.login-blue .modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-blue .modal-body form input {
+  margin: 10px 0;
+  padding: 7px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.header-modal {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-blue {
+  background-color: #9a9a9a;
+  padding: 50px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

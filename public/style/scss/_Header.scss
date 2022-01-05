@@ -1,0 +1,16 @@
+@use "_variables";
+.header-blue{
+    color: variables.$black;
+    padding: 10px;
+}
+.navbar-expand-lg .navbar-nav a.nav-link{
+    color: variables.$black;
+    .navbar-expand-lg .navbar-nav a.nav-link:hover{
+        border-bottom: 1px solid variables.$black;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.header-blue .navbar-toggler-icon{
+    color: variables.$black;
+}

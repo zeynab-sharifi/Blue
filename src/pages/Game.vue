@@ -1,3 +1,11 @@
 <template>
-    <h1>TopGame</h1>
+    <TopGamesPage></TopGamesPage>
 </template>
+<script>
+import TopGamesPage from './layer/TopGamesPage.vue'
+    export default{
+        components:{
+            TopGamesPage
+        }
+    }
+</script>

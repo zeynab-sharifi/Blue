@@ -31,13 +31,36 @@
         </div>
 </template>
 <script>
+    // import axios from "axios"
     export default{
         data(){
             return{
                 title :'Blue Game',
                 message :'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, quae vitae harum nihil nobis dolores voluptatesb quibusdam labore sunt accusantium, expedita, veniam a qui rerum! Est illum repellat hic et.',
-                betterText : 'Lorem ipsum dolor sit amet consectetur'
+                betterText : `${
+                    'Lorem ipsum dolor sit amet consectetur',
+                    'Lorem ipsum dolor',
+                    'Lorem ipsum '
+                }`
             }
-        }
+        },
+        // setup(){
+        //      function getimg(){
+        //         axios
+        //         axios.get('')
+        //         .then(function (response) {
+        //             // handle success
+        //             console.log(response);
+        //         })
+        //         .catch(function (error) {
+        //             // handle error
+        //             console.log(error);
+        //         })
+        //         .then(function () {
+        //             // always executed
+        //         });
+        //     }
+        //     getimg() 
+        // }
     }
 </script>

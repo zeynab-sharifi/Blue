@@ -43,13 +43,32 @@ import TxtHeaderHome from "./layer/TxtHeaderHome";
 import TopGame from "./layer/TopGame";
 import AskedQuSec from "./layer/AskedQuSec";
 import TopNews from "./layer/TopNews.vue";
+// import axios from "axios"
     export default{
         components :{
-    HeaderHomeSe,
-    TxtHeaderHome,
-    TopGame,
-    AskedQuSec,
-    TopNews
-}
+            HeaderHomeSe,
+            TxtHeaderHome,
+            TopGame,
+            AskedQuSec,
+            TopNews
+        },
+        // setup(){
+        //     function getpost(){
+        //         axios
+        //         axios.get('https://jsonplaceholder.typicode.com/posts')
+        //         .then(function (response) {
+        //             // handle success
+        //             console.log(response);
+        //         })
+        //         .catch(function (error) {
+        //             // handle error
+        //             console.log(error);
+        //         })
+        //         .then(function () {
+        //             // always executed
+        //         });
+        //     }
+        //     getpost(),
+        // }
     }
 </script>
