@@ -1,5 +1,6 @@
 <template>
-    <section>
+    <div id="home">
+        <section>
         <div class="header-section-home">
         <div class="container">
         <HeaderHomeSe></HeaderHomeSe>
@@ -27,23 +28,36 @@
         </div>
     </section>
     <section>
-        <div class="top-news-section">
+        <div v-if="loading">
+        <div class="spinner-border" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div>
+        <div class="top-news-section" v-else>
             <div class="container">
                 <TxtHeaderHome></TxtHeaderHome>
             </div>
             <div class="container">
-                <TopNews></TopNews>
+                <div class="row">
+                    <div class="col-12" v-for="post in posts" :key="post.id">
+                <TopNews :post="post"></TopNews>
+                </div>
+                    <a href="" class="btn btn-blue btn-center">more..</a>
+                </div>
             </div>
         </div>
     </section>
+    </div>
 </template>
 <script>
 import HeaderHomeSe from "./layer/HeaderHomeSe";
 import TxtHeaderHome from "./layer/TxtHeaderHome";
 import TopGame from "./layer/TopGame";
 import AskedQuSec from "./layer/AskedQuSec";
-import TopNews from "./layer/TopNews.vue";
-// import axios from "axios"
+import TopNews from "./layer/Post/TopNews";
+import axios from "axios";
+import { ref } from "vue";
+
     export default{
         components :{
             HeaderHomeSe,
@@ -52,23 +66,30 @@ import TopNews from "./layer/TopNews.vue";
             AskedQuSec,
             TopNews
         },
-        // setup(){
-        //     function getpost(){
-        //         axios
-        //         axios.get('https://jsonplaceholder.typicode.com/posts')
-        //         .then(function (response) {
-        //             // handle success
-        //             console.log(response);
-        //         })
-        //         .catch(function (error) {
-        //             // handle error
-        //             console.log(error);
-        //         })
-        //         .then(function () {
-        //             // always executed
-        //         });
-        //     }
-        //     getpost(),
-        // }
+        setup(){
+           const posts = ref([]);
+           const loading = ref(true);
+
+           function getPost(){
+               axios.get('https://jsonplaceholder.typicode.com/posts?_page=&_limit=3')
+                .then(function (response) {
+                    posts.value = response.data;
+                    loading.value = false
+                    
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
+            }
+            getPost();
+            return{ 
+                posts,
+                
+             }
+        },
     }
 </script>

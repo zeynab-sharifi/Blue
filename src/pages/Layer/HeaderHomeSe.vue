@@ -37,7 +37,8 @@
             return{
                 title :'Blue Game',
                 message :'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, quae vitae harum nihil nobis dolores voluptatesb quibusdam labore sunt accusantium, expedita, veniam a qui rerum! Est illum repellat hic et.',
-                betterText : 'Lorem ipsum dolor sit amet consectetur'
+                betterText : 'Lorem ipsum dolor sit amet consectetur',
+                   
             }
         },
         // setup(){
