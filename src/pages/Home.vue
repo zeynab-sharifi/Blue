@@ -42,7 +42,7 @@
                     <div class="col-12" v-for="post in posts" :key="post.id">
                 <TopNews :post="post"></TopNews>
                 </div>
-                    <a href="" class="btn btn-blue btn-center">more..</a>
+                    <router-link :to="{name:'Posts'}" class="btn btn-blue btn-center">more..</router-link>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@ import { ref } from "vue";
             getPost();
             return{ 
                 posts,
-                
+                loading
              }
         },
     }
