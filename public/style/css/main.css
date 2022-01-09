@@ -237,8 +237,34 @@ button.btn-blue-2:hover, a.btn-blue-2:hover {
 }
 
 .footer-blue {
-  background-color: #9a9a9a;
+  background-color: #f8f9fa;
   padding: 50px 0;
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #444 !important;
+}
+
+ul li {
+  list-style-type: none !important;
+}
+
+.post-show-page {
+  padding: 100px 0;
+}
+.post-show-page .list-group {
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.post-show-page .list-group .active {
+  background: #43cea2;
+  background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+  background: linear-gradient(to right, #185a9d, #43cea2);
 }
 
 /*# sourceMappingURL=main.css.map */

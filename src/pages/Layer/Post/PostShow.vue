@@ -1,13 +1,24 @@
 <template>
-    <div class="container">
+    <div class="post-show-page">
+        <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-9">
                         <TopNews :post="post"></TopNews>
-                    </div> 
-                        </div>
-                        
                     </div>
-                   
+                    <div class="col-3">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                The current link item
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                            <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+    </div>              
 </template>
 <script>
     import TopNews from "./TopNews.vue";

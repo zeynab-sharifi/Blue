@@ -1,0 +1,14 @@
+@use "_variables";
+@use "_mixins";
+.post-show-page{
+    padding: 100px 0;
+    .list-group{
+        border: none;
+        box-shadow: 0 1px 2px rgba($color: variables.$black, $alpha: .10);
+        .active{
+            background: #43cea2;  
+            background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  
+            background: linear-gradient(to right, #185a9d, #43cea2);
+        }
+    }
+}
