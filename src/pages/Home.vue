@@ -23,7 +23,12 @@
                 <TxtHeaderHome></TxtHeaderHome>
             </div>
             <div class="container">
-                <AskedQuSec></AskedQuSec>
+                <div class="row">
+                <div class="col-lg-4 col-md-6 col-12" v-for="comment in comments" :key="comment.id">
+                    <CommentSec :comment="comment"></CommentSec>
+                </div>
+                 <!-- <router-link :to="{name:'CommentSec'}" class="btn btn-blue btn-center">More...</router-link> -->
+                </div>
             </div>
         </div>
     </section>
@@ -53,22 +58,25 @@
 import HeaderHomeSe from "./layer/HeaderHomeSe";
 import TxtHeaderHome from "./layer/TxtHeaderHome";
 import TopGame from "./layer/TopGame";
-import AskedQuSec from "./layer/AskedQuSec";
+// import CommentList from "./layer/comment/CommentList";
 import TopNews from "./layer/Post/TopNews";
 import axios from "axios";
 import { ref } from "vue";
+import CommentSec from "./layer/comment/CommentSec.vue";
 
     export default{
         components :{
-            HeaderHomeSe,
-            TxtHeaderHome,
-            TopGame,
-            AskedQuSec,
-            TopNews
-        },
+    HeaderHomeSe,
+    TxtHeaderHome,
+    TopGame,
+    // CommentList,
+    TopNews,
+    CommentSec
+},
         setup(){
            const posts = ref([]);
            const loading = ref(true);
+           const comments = ref([])
 
            function getPost(){
                axios.get('https://jsonplaceholder.typicode.com/posts?_page=&_limit=3')
@@ -78,17 +86,25 @@ import { ref } from "vue";
                     
                 })
                 .catch(function (error) {
-                    // handle error
+                    
                     console.log(error);
-                })
-                .then(function () {
-                    // always executed
                 });
             }
+            function getComment(){
+                axios.get('https://jsonplaceholder.typicode.com/comments?_page=&_limit=3')
+                .then(function (response) {
+                    comments.value = response.data;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            getComment();
             getPost();
             return{ 
                 posts,
-                loading
+                loading,
+                comments
              }
         },
     }
