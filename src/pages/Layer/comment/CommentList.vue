@@ -11,7 +11,6 @@ import axios from "axios";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
     export default{
-        components: { CommentSec },
         setup(){
             const comments = ref([])
             const route = useRoute();

@@ -13,7 +13,12 @@
             <TxtHeaderHome></TxtHeaderHome>
         </div>
         <div class="container">
-            <TopGame></TopGame>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12" v-for="Photo in Photos" :key="Photo.id">
+                    <TopGame :Photos="Photos"></TopGame>
+                </div>
+                <router-link :to="{name:'GamePage'}" class="btn btn-blue btn-center">More...</router-link>
+            </div> 
         </div>
     </div>
     </section>
@@ -24,10 +29,10 @@
             </div>
             <div class="container">
                 <div class="row">
-                <div class="col-lg-4 col-md-6 col-12" v-for="comment in comments" :key="comment.id">
-                    <CommentSec :comment="comment"></CommentSec>
-                </div>
-                 <!-- <router-link :to="{name:'CommentSec'}" class="btn btn-blue btn-center">More...</router-link> -->
+                    <div class="col-lg-4 col-md-6 col-12" v-for="comment in comments" :key="comment.id">
+                        <CommentSec :comment="comment"></CommentSec>
+                    </div>
+                    <router-link :to="{name:'CommentList'}" class="btn btn-blue btn-center">More...</router-link>
                 </div>
             </div>
         </div>
@@ -55,28 +60,28 @@
     </div>
 </template>
 <script>
-import HeaderHomeSe from "./layer/HeaderHomeSe";
-import TxtHeaderHome from "./layer/TxtHeaderHome";
-import TopGame from "./layer/TopGame";
-// import CommentList from "./layer/comment/CommentList";
-import TopNews from "./layer/Post/TopNews";
-import axios from "axios";
-import { ref } from "vue";
-import CommentSec from "./layer/comment/CommentSec.vue";
+    import HeaderHomeSe from "./layer/HeaderHomeSe";
+    import TxtHeaderHome from "./layer/TxtHeaderHome";
+    import TopGame from "./layer/GamePage/TopGame";
+    import CommentSec from "./layer/comment/CommentSec";
+    import TopNews from "./layer/Post/TopNews";
+    import axios from "axios";
+    import { ref } from "vue";
+
 
     export default{
         components :{
-    HeaderHomeSe,
-    TxtHeaderHome,
-    TopGame,
-    // CommentList,
-    TopNews,
-    CommentSec
-},
+            HeaderHomeSe,
+            TxtHeaderHome,
+            TopGame,
+            TopNews,
+            CommentSec
+        },
         setup(){
            const posts = ref([]);
            const loading = ref(true);
-           const comments = ref([])
+           const comments = ref([]);
+           const Photos = ref([]);
 
            function getPost(){
                axios.get('https://jsonplaceholder.typicode.com/posts?_page=&_limit=3')
@@ -99,12 +104,23 @@ import CommentSec from "./layer/comment/CommentSec.vue";
                     console.log(error);
                 });
             }
+            function getTopGame(){
+                axios.get('https://jsonplaceholder.typicode.com/photos?_page=&_limit=4')
+                .then(function (response) {
+                    Photos.value = response.data;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            getTopGame();
             getComment();
             getPost();
             return{ 
                 posts,
                 loading,
-                comments
+                comments,
+                Photos
              }
         },
     }

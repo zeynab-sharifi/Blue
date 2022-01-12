@@ -6,7 +6,7 @@
     </div>
 </template>
 <script>
-import TopGame from './layer/TopGame.vue'
+import TopGame from './layer/GamePage/TopGame.vue'
     export default{
         components:{
                 TopGame
