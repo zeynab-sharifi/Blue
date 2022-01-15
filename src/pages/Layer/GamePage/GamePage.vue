@@ -1,8 +1,11 @@
 <template>
   <div class="container">
         <div class="row">
-            <div class="col-12">
-            
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="photos-box">
+                    <img src="" alt="">
+                    <h2></h2>
+                </div>
             </div> 
         </div>              
     </div>
@@ -26,6 +29,10 @@ export default {
                 });
             }
             getTopGame();
+            return{
+                Photos,
+                route
+            }
     }
 }
 </script>

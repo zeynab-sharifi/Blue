@@ -1,30 +1,29 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-            
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12" v-for="post in posts" :key="post.id">
+                <div class="post-box">
+                    <router-link :to="{ name:'PostId', params:{id: post.id} }"><h3>{{post.title}}</h3></router-link>
+                    <p>{{post.body}}</p>
+                </div>
             </div> 
         </div>              
     </div>
 </template>
 
 <script>
-    // import TopNews from "./TopNews.vue";
     import axios from "axios";
     import { ref } from "vue";
     import { useRoute } from "vue-router";
     export default{
-       components:{
-        //    TopNews
-       },
         setup(){
-           const post = ref({});
+           const posts = ref({});
            const loading = ref(true);
            const route = useRoute();
            function getPost(){
                axios.get(`https://jsonplaceholder.typicode.com/posts`)
                 .then(function (response) {
-                    post.value = response.data;
+                    posts.value = response.data;
                     loading.value = false
                     
                 })
@@ -38,7 +37,7 @@
             }
             getPost();
             return{ 
-                post,
+                posts,
                 loading,
                 route
              }
@@ -47,5 +46,5 @@
 </script>
 
 <style>
-
+   
 </style>

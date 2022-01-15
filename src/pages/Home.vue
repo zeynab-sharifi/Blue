@@ -14,8 +14,8 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12" v-for="Photo in Photos" :key="Photo.id">
-                    <TopGame :Photos="Photos"></TopGame>
+                <div class="col-lg-3 col-md-6 col-sm-12" v-for="photo in photos" :key="photo.id">
+                    <TopGame :photos="photos"></TopGame>
                 </div>
                 <router-link :to="{name:'GamePage'}" class="btn btn-blue btn-center">More...</router-link>
             </div> 
@@ -81,7 +81,7 @@
            const posts = ref([]);
            const loading = ref(true);
            const comments = ref([]);
-           const Photos = ref([]);
+           const photos = ref([]);
 
            function getPost(){
                axios.get('https://jsonplaceholder.typicode.com/posts?_page=&_limit=3')
@@ -107,7 +107,7 @@
             function getTopGame(){
                 axios.get('https://jsonplaceholder.typicode.com/photos?_page=&_limit=4')
                 .then(function (response) {
-                    Photos.value = response.data;
+                    photos.value = response.data;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -120,7 +120,7 @@
                 posts,
                 loading,
                 comments,
-                Photos
+                photos,
              }
         },
     }
