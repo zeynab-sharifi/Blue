@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12" v-for="post in posts" :key="post.id">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12" v-for="post in posts" :key="post.id">
                 <div class="post-box">
                     <router-link :to="{ name:'PostId', params:{id: post.id} }"><h3>{{post.title}}</h3></router-link>
                     <p>{{post.body}}</p>
