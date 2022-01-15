@@ -1,13 +1,13 @@
 <template>
             <div class="top-Game">
-                <img src={photos.url} alt="">
-                <h3>{{ photos.title }}</h3>
+                <img :src="photo.url" alt="">
+                <h3>{{ photo.title }}</h3>
             </div>
 </template>
 <script>
     export default{
         props: {
-            photos:Object
+            photo:Object
         }
     }
 </script>

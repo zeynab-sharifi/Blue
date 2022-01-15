@@ -1,10 +1,10 @@
 <template>
   <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12" v-for="Photo in Photos" :key="Photo.id">
                 <div class="photos-box">
-                    <img src="" alt="">
-                    <h2></h2>
+                    <img :src="Photo.url" alt="">
+                    <h2>{{ Photo.title }}</h2>
                 </div>
             </div> 
         </div>              
@@ -20,7 +20,7 @@ export default {
         const Photos = ref({});
         const route = useRoute();
         function getTopGame(){
-                axios.get('https://jsonplaceholder.typicode.com/photos')
+                axios.get('https://jsonplaceholder.typicode.com/photos?_page=&_limit=10')
                 .then(function (response) {
                     Photos.value = response.data;
                 })

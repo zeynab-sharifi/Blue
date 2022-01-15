@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12" v-for="photo in photos" :key="photo.id">
-                    <TopGame :photos="photos"></TopGame>
+                    <TopGame :photo="photo"></TopGame>
                 </div>
                 <router-link :to="{name:'GamePage'}" class="btn btn-blue btn-center">More...</router-link>
             </div> 

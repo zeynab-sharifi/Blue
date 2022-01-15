@@ -281,4 +281,17 @@ ul li {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
+.photos-box {
+  padding: 10px 12px;
+  margin: 10px;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.photos-box img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
 /*# sourceMappingURL=main.css.map */
